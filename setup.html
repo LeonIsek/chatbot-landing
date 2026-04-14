@@ -329,36 +329,23 @@
           </div>
         </div>
 
-        <p class="section-title">Plan</p>
+        <p class="section-title">Preis</p>
 
         <div class="field">
-          <div class="plan-options">
-            <div>
-              <input class="plan-option" type="radio" name="plan" id="planStarter" value="99" checked/>
-              <label class="plan-label" for="planStarter">
-                <span class="plan-name">Starter</span>
-                <span class="plan-price">99</span>
-                <span class="plan-sub">CHF/Monat</span>
-              </label>
+          <div style="display:flex;align-items:center;gap:16px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;">
+            <div style="flex:1;text-align:center;">
+              <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:#94a3b8;margin-bottom:4px;">Einrichtung</div>
+              <div style="font-size:28px;font-weight:800;color:#6366f1;">CHF 199</div>
+              <div style="font-size:12px;color:#94a3b8;">einmalig</div>
             </div>
-            <div>
-              <input class="plan-option" type="radio" name="plan" id="planPro" value="199"/>
-              <label class="plan-label" for="planPro">
-                <span class="plan-name">Pro</span>
-                <span class="plan-price">199</span>
-                <span class="plan-sub">CHF/Monat</span>
-              </label>
-            </div>
-            <div>
-              <input class="plan-option" type="radio" name="plan" id="planEnterprise" value="299"/>
-              <label class="plan-label" for="planEnterprise">
-                <span class="plan-name">Enterprise</span>
-                <span class="plan-price">299</span>
-                <span class="plan-sub">CHF/Monat</span>
-              </label>
+            <div style="font-size:24px;color:#cbd5e1;font-weight:300;">+</div>
+            <div style="flex:1;text-align:center;">
+              <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:#94a3b8;margin-bottom:4px;">Monatlich</div>
+              <div style="font-size:28px;font-weight:800;color:#6366f1;">CHF 129</div>
+              <div style="font-size:12px;color:#94a3b8;">pro Monat</div>
             </div>
           </div>
-          <p class="hint" style="margin-top:10px;">Zahlung per Banküberweisung oder Twint — du kriegst eine Rechnung von Leon.</p>
+          <p class="hint" style="margin-top:10px;">Zahlung per Banküberweisung oder Twint — du kriegst eine Rechnung von uns.</p>
         </div>
 
         <div id="errorMsg" class="error-msg"></div>
@@ -412,7 +399,7 @@
     }
 
     const tone = document.querySelector('input[name="tone"]:checked')?.value || 'friendly';
-    const monthlyPrice = parseInt(document.querySelector('input[name="plan"]:checked')?.value || '99', 10);
+    const monthlyPrice = 129;
 
     btn.disabled = true;
     btn.textContent = 'Wird eingerichtet...';

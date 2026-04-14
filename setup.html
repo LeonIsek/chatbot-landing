@@ -257,6 +257,8 @@
     <!-- Form -->
     <div class="form-view" id="formView">
       <form id="onboardForm" novalidate>
+        <!-- Honeypot: unsichtbar für Menschen, Bots füllen es aus -->
+        <input type="text" name="_hp" id="_hp" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <p class="section-title">Dein Business</p>
 
@@ -417,7 +419,8 @@
           openingHours,
           prices: document.getElementById('prices').value.trim() || null,
           tone,
-          monthlyPrice
+          monthlyPrice,
+          _hp: document.getElementById('_hp').value
         })
       });
 
